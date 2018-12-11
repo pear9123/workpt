@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sqlMap PUBLIC "-//iBATIS.com//DTD SQL Map 2.0//EN" "http://www.ibatis.com/dtd/sql-map-2.dtd">
+
+<sqlMap namespace="Search">
+
+	<typeAlias  alias="egovMap" type="egovframework.rte.psl.dataaccess.util.EgovMap"/>
+	<typeAlias  alias="SearchVO" type="workpt.lib.search.service.SearchVO"/>
+	
+	<select id="SearchDAO.SelectlibList"  parameterClass="String" resultClass="SearchVO" >
+		<![CDATA[
+		SELECT
+			*
+		FROM
+			library
+		WHERE
+			lib_name like %#lib_name#%
+	    ]]>
+	</select>
+		
+		
+</sqlMap>
