@@ -4,18 +4,24 @@
 <sqlMap namespace="Search">
 
 	<typeAlias  alias="egovMap" type="egovframework.rte.psl.dataaccess.util.EgovMap"/>
-	<typeAlias  alias="SearchVO" type="workpt.lib.search.service.SearchVO"/>
+	<typeAlias  alias="SearchVO" type="egovframework.lib.search.service.SearchVO"/>
 	
-	<select id="SearchDAO.SelectlibList"  parameterClass="String" resultClass="SearchVO" >
-		<![CDATA[
+	<select id="SearchDAO.SelectlibList"  parameterClass="java.lang.String" resultClass="SearchVO" >
 		SELECT
 			*
 		FROM
 			library
 		WHERE
-			lib_name like %#lib_name#%
-	    ]]>
+			lib_name like concat('%',#value#,'%')
 	</select>
 		
+	<select id="SearchDAO.SelectDetail"  parameterClass="java.lang.String" resultClass="SearchVO" >
+		SELECT
+			*
+		FROM
+			library
+		WHERE
+			uid = #uid#
+	</select>
 		
 </sqlMap>

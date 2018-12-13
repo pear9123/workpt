@@ -23,15 +23,15 @@
 <title>포탈</title>
 <%-- <link href="<c:url value='/'/>css/common.css" rel="stylesheet" type="text/css" > --%>
     <!-- Bootstrap core CSS -->
-    <link href="<c:url value='/'/>bootstrap2/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="${pageContext.request.contextPath }/bootstrap2/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom fonts for this template -->
-    <link href="<c:url value='/'/>bootstrap2/vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
-    <link href="<c:url value='/'/>bootstrap2/vendor/simple-line-icons/css/simple-line-icons.css" rel="stylesheet" type="text/css">
+    <link href="${pageContext.request.contextPath }/bootstrap2/vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
+    <link href="${pageContext.request.contextPath }/bootstrap2/vendor/simple-line-icons/css/simple-line-icons.css" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
 
     <!-- Custom styles for this template -->
-    <link href="<c:url value='/'/>bootstrap2/css/landing-page.min.css" rel="stylesheet">
+    <link href="${pageContext.request.contextPath }/bootstrap2/css/landing-page.min.css" rel="stylesheet">
 </head>
 <body>
 <noscript>자바스크립트를 지원하지 않는 브라우저에서는 일부 기능을 사용하실 수 없습니다.</noscript>	
@@ -74,8 +74,8 @@
 </div>
 </header>
 <!-- Bootstrap core JavaScript -->
-<script src="vendor/jquery/jquery.min.js"></script>
-<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="${pageContext.request.contextPath }/bootstrap2/vendor/jquery/jquery.min.js"></script>
+<script src="${pageContext.request.contextPath }/bootstrap2/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
 </body>
 </html>
