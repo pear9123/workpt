@@ -41,6 +41,10 @@
                                 </li>
                                 <li><a href="#settings" data-toggle="tab">전자책서버</a>
                                 </li>
+                                <li><a href="#etc" data-toggle="tab">기타정보</a>
+                                </li>
+                                <li><a href="#engineer" data-toggle="tab">담당자정보</a>
+                                </li>
                             </ul>
 
                             <!-- Tab panes -->
@@ -85,6 +89,17 @@
                                     <br/>
                                     <h4>3.전자책 서버 계정</h4>
                                     <p>${list.server_ebook_ad_id} / ${list.server_ebook_ad_pw }</p>
+                                </div>
+                                <div class="tab-pane fade" id="etc">
+                                	<br/>
+                                    <h4>1.기타정보</h4>
+                                    <p>${list.etc_info}</p>
+                                   
+                                </div>
+                                <div class="tab-pane fade" id="engineer">
+                                	<br/>
+                               
+                                   
                                 </div>
                             </div>
                         </div>

@@ -105,7 +105,7 @@ function fnInit() {
     	<form class="form-signin" name="loginForm" method="post" action="#LINK">
         	<h2 class="form-signin-heading">로그인</h2>
         		<label for="inputEmail" class="sr-only">ID</label>
-        		<input type="email" id="inputEmail" title="아이디를 입력하세요." name="id" maxlength="10" class="form-control" placeholder="Email address" required autofocus>
+        		<input type="text" id="inputEmail" title="아이디를 입력하세요." name="id" maxlength="10" class="form-control" placeholder="Email address" required autofocus>
         		<label for="inputPassword" class="sr-only">Password</label>
         		<input type="password" id="inputPassword" maxlength="25" title="비밀번호를 입력하세요." name="password"  class="form-control" placeholder="Password" onkeydown="javascript:if (event.keyCode == 13) { actionLogin(); }" required>
         	<div class="checkbox">
