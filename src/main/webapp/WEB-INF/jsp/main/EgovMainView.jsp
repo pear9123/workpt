@@ -41,7 +41,7 @@
 <!-- Navigation -->
 <nav class="navbar navbar-light bg-light static-top">
 	<div class="container">
-    	<a class="navbar-brand" href="#">Start Bootstrap</a>
+    	<a class="navbar-brand" href="${pageContext.request.contextPath }/cmm/main/mainPage.do">Start Bootstrap</a>
     	 <%
 		 	LoginVO loginVO = (LoginVO)session.getAttribute("LoginVO"); 
 		 %>
@@ -53,10 +53,10 @@
 <!-- Masthead -->
 <header class="masthead text-white text-center">
 <div class="overlay"></div>
-	<div class="container">
+	<div class="container" style="margin-bottom: 135px;">
         <div class="row">
         	<div class="col-xl-9 mx-auto">
-            	<h1 class="mb-5">바로검색</h1>
+            	<h1 class="mb-5">도서관 검색</h1>
           	</div>
 		<div class="col-md-10 col-lg-8 col-xl-7 mx-auto">
         	<form name="lib_search" action="/lib/search.do" method="post">
@@ -77,7 +77,7 @@
 	<div class="container">
         <div class="row">
         	<div class="col-xl-9 mx-auto">
-            	<h1 class="mb-5">바로검색</h1>
+            	<h1 class="mb-5">도서 검색</h1>
           	</div>
 		<div class="col-md-10 col-lg-8 col-xl-7 mx-auto">
         	<form name="api" action="/kakao/api.do" method="post">

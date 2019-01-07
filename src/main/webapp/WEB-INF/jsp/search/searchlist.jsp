@@ -1,3 +1,4 @@
+<%@page import="egovframework.com.cmm.LoginVO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
@@ -7,19 +8,14 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <!-- Bootstrap Core CSS -->
     <link href="${pageContext.request.contextPath }/bootstrap3/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-
     <!-- MetisMenu CSS -->
     <link href="${pageContext.request.contextPath }/bootstrap3/vendor/metisMenu/metisMenu.min.css" rel="stylesheet">
-
     <!-- DataTables CSS -->
     <link href="${pageContext.request.contextPath }/bootstrap3/vendor/datatables-plugins/dataTables.bootstrap.css" rel="stylesheet">
-
     <!-- DataTables Responsive CSS -->
     <link href="${pageContext.request.contextPath }/bootstrap3/vendor/datatables-responsive/dataTables.responsive.css" rel="stylesheet">
-
     <!-- Custom CSS -->
     <link href="${pageContext.request.contextPath }/bootstrap3/dist/css/sb-admin-2.css" rel="stylesheet">
-
     <!-- Custom Fonts -->
     <link href="${pageContext.request.contextPath }/bootstrap3/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 <title>Insert title here</title>
@@ -35,6 +31,12 @@
 <form name="frm">
 	<input type="hidden" name="uid" value="">
 </form>
+<!-- Navigation -->
+<nav class="navbar navbar-light bg-light static-top">
+	<div class="container">
+    	<a class="navbar-brand" href="${pageContext.request.contextPath }/cmm/main/mainPage.do">Go Home</a>
+    </div>
+</nav>
 
             <div class="row">
                 <div class="col-lg-12">

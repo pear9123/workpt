@@ -7,6 +7,7 @@ import java.net.HttpURLConnection;
 import java.net.URL;
 import java.net.URLEncoder;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -30,7 +31,7 @@ import com.google.gson.JsonParseException;
 public class isbnsearch {
 	
 	@RequestMapping(value = "/kakao/api.do")
-	public String main(String[] args, HttpServletRequest request, ModelMap model ) {
+	public String main(String[] args, HttpServletRequest request, ModelMap model ) throws ParseException {
 		String text2  = request.getParameter("text");
 		String booklist = null;
 		System.out.println(text2);
@@ -56,26 +57,36 @@ public class isbnsearch {
                 response.append(inputLine);
             }
             br.close();
-            System.out.println(response.toString());
             booklist = response.toString();
+            
+            List<Map<String, Object>> data = new ArrayList<Map<String, Object>>();
+            JSONParser parser = new JSONParser();
+            JSONObject univ = (JSONObject)parser.parse(booklist);
+            //System.out.println("=="+univ.toJSONString());
+            JSONArray arr = (JSONArray)univ.get("documents");
+            data = utils.getListMapFromJsonArray(arr);
+            
+            System.out.println("=="+data);
+            model.addAttribute("items", data);
         } catch (Exception e) {
             System.out.println(e);
         }
-        List<Map<String, Object>> data = new ArrayList<Map<String, Object>>();
-        JSONParser parser = new JSONParser();
-        try {
-			JSONObject obj = (JSONObject)parser.parse(booklist);
-			JSONArray ja = (JSONArray)obj.get("document");
-			for(int i=0; i<ja.size(); i++){
+        
+//        List<Map<String, Object>> data = new ArrayList<Map<String, Object>>();
+//        JSONParser parser = new JSONParser();
+//        try {
+//			JSONObject obj = (JSONObject)parser.parse(booklist);
+//			JSONArray ja = (JSONArray)obj.get("document");
+//			System.out.println(ja.size());
+//			for(int i=0; i<ja.size(); i++){
 //				JSONObject tmp = (JSONObject)ja.get(i);
 //				String title = (String)tmp.get("title");
-				System.out.println(ja.get(i));
-			}
-			
-		} catch (ParseException e) {
+//				System.out.println(ja.get(i));
+//			}
+//		} catch (ParseException e) {
 			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+//			e.printStackTrace();
+//		}
         
         
        
