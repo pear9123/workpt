@@ -1,0 +1,122 @@
+@charset "utf-8";
+
+/*로그인*/
+.w100{width:100%}
+.w80p{width:80px}
+.w_txt{min-width:60px;}
+
+.btn-sumit{background:#005aab !important; color:#ffffff; width:100%; border:1px solid #005aab !important}
+
+.login_box{background:#ffffff url(/img/ct_pic.jpg) no-repeat center 20px; background-size:160px;  padding:20px; padding-top:150px; border-top:2px solid #005aab; border-bottom:1px solid #dcdcdc}
+.login_box h4{font-size:22px; margin-bottom:10px; text-align:center; text-transform:uppercase}
+.login_box p.tac{text-align:center;margin-bottom:40px;}
+
+.login_top, .login_bottom{max-width:400px; margin: 0 auto;}
+.login_top  .input_txt li input{width:100%}
+.login_top  li{margin-bottom:10px;}
+
+.login_top .rem{line-height:70px; height:70px;}
+
+
+.login_bottom{overflow:hidden; border-top:1px solid #808080;}
+.login_bottom li{display:inline-block;margin-right:20px }
+.login_bottom li:last-child{margin-right:0px}
+.login_bottom li a{line-height:50px; height:50px; display:block}
+.login_bottom li a:before{font-family:'FontAwesome'; content:'\f061'; margin-right:10px; display:inline-block; font-size:0.85em}
+
+.btnBox{position:relative;}
+.btnBox .btn_alink{position:absolute; right:15px; top:25px; font-size:0.8em}
+
+.slogin{overflow:hidden;}
+.slogin ul.input_txt{overflow:hidden; margin-bottom:10px;}
+.slogin ul.input_txt li{margin-bottom:5px; overflow:hidden;}
+.slogin ul.input_txt li label{font-weight:bold; width:120px; float:left;}
+.slogin ul.input_txt li input{width: calc(100% - 120px); float:left; background:#ffffff}
+
+/*아이디비밀번호찾기*/
+
+.sh_box{max-width: 300px; background: #005aab; margin: 0 auto; margin:0 auto; margin-bottom:10px;  border-radius: 10px; text-align:center;}
+.pw_sh_box{background: #24acac;}
+.sh_box a{display: block; width: 100%; height: 100%; padding: 20px 0; color: #fff;}
+.sh_box a img{max-width:40px; vertical-align:middle;}
+.sh_box a h4{font-size: 18px;  vertical-align:middle; color:#ffffff; display:inline-block; margin-left:20px; margin-bottom:0}
+
+/*신착자료*/
+
+#sub_search{background:#0eb8b8; padding:10px; margin-bottom:20px}
+#sub_search .search_wrap{overflow:hidden;}
+#sub_search .search_wrap{float:left; width:calc(100% - 100px);}
+#sub_search .search_wrap .input_search{width:100%; border:0px;}
+#sub_search .ms,
+#sub_search .d_search{float:left;}
+#sub_search .ms{width:40px;}
+#sub_search .d_search{width:60px;}
+#sub_search .ms{top:0; right:0;background: #ffae00 url(../images/main/btn_search.png) no-repeat 50% 50%; background-size:cover;font-size: 0;width: 40px;height: 40px;border: 0;}
+
+#pop_word{overflow:hidden; margin-bottom:30px; font-size:0.9em}
+#pop_word h4{float:left; width:17%; line-height:100%; border-right:1px solid #dcdcdc}
+#pop_word ul{overflow:hidden; float:left; width:83%; padding-left:15px;}
+#pop_word ul li{float:left; margin:0 1.5%; width:22%; line-height:100%; overflow:hidden;}
+#pop_word ul li a{color:#808080}
+
+#book_list{overflow:hidden; text-align:left; }
+#book_list ul{font-size:0;}
+#book_list ul li{display:inline-block; width:30.33%; margin:0 1.5%; margin-bottom:15px; text-align:center; vertical-align:top}
+#book_list ul li img{margin-bottom:5px;}
+#book_list ul li a{display:block}
+#book_list ul li a span{display:block; margin-bottom:5px; font-size:13px; color:#808080}
+#book_list ul li a span.tit{font-weight:bold; font-size:15px; color:#323232}
+
+
+
+/*상세검색*/
+
+#search_detail{border-top:2px solid #005aab; margin-bottom:30px;}
+#search_detail ul{margin-bottom:20px;}
+#search_detail li{overflow:hidden; border-bottom:1px solid #dcdcdc; padding:15px 0px;}
+#search_detail li .title{float:left; width:25%; clear:both; color:#005aab; font-weight:700; line-height:40px; display:block}
+#search_detail li .title label{color:#005aab; font-weight:800; line-height:40px; display:block}
+#search_detail li .data{float:right; width:75%;}
+#search_detail li .data .total_box{width:100%}
+#search_detail li .data .totalselect{width:100%}
+#search_detail p{margin-bottom:30px; text-align:center;}
+
+
+/*올해의책 및 상세검색*/
+
+.selct_box{padding:20px 15px; text-align:right; margin-bottom:20px; background:#f5f5f5; }
+.selct_box select{display:inline-block; vertical-align:top; margin-left:10px; min-width:60px}
+.selct_box input{display:inline-block; vertical-align:top; margin-left:10px;}
+.selct_box div{display:inline-block; vertical-align:top; margin-left:10px;}
+.selct_box div.dpb{margin-left:0}
+
+.recomm{overflow:hidden; border-top:2px solid #005aab; margin-bottom:30px;}
+.recomm .rec{overflow:hidden; padding:25px 0px; border-bottom:1px solid #dcdcdc}
+.recomm .rec_top{overflow:hidden; margin-bottom:10px;}
+.recomm .rec_top .img{position:relative; text-align:center; max-width:540px; float:left; width:30%; max-width:150px}
+.recomm .rec_top .img span{position:absolute; left:0;top:0}
+.recomm .rec_top .img input{position:absolute; left:10px; top:10px; z-index:10}
+.recomm .rec_top .rec_tit{float:left; width:65%; margin-left:5%;}
+.recomm .rec_top .rec_tit h4{font-weight:600; font-size:22px;; margin-bottom:10px;}
+.recomm .rec_top .rec_tit h4 span{font-weight:normal; font-size:13px; display:inline-block; padding:4px 8px; line-height:100%; border-radius:5px; background:#606060; color:#ffffff; margin-bottom:10px;}
+.recomm .rec_info{display:block;clear:both; border-top:1px solid #dcdcdc; padding:20px 0px 0;}
+.recomm .rec_info h4{margin-bottom:10px; font-size:1.1em; font-weight:600}
+
+.cate01{background:#3366CC !important}
+.cate02{background:#E6560B !important}
+.cate03{background:#489EE7 !important}
+.cate04{background:#98CB16 !important}
+.cate05{background:#FC9B41 !important}
+
+.recomm .rec_top .rec_tit h4 b{display:block; font-weight:800}
+.recomm .info{clear:both;}
+
+
+/*이달의 행사*/
+
+.month_box{text-align:center; margin-bottom:20px}
+.month_box .mon_b{position:relative; max-width:500px; margin: 0 auto;}
+.month_box .mon_tit {font-size:36px; font-weight:normal}
+.month_box .mon_btn:before{font-family:'FontAwesome'; content:'\f061'; display:inline-block; position:absolute; top:0; bottom:0; margin:auto 0; line-height:40px; right:10%; padding:0 15px;}
+.month_box .btn_mon_prev:before{content:'\f060'; right:auto; left:10%}
+.month_box .mon_btn span{display:none}
