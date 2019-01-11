@@ -39,13 +39,15 @@
 	<caption> 리스트</caption>
 	<colgroup>
 		<col width="*%">
-		<col width="75%">
+		<col width="20%">
+		<col width="55%">
 		<col width="20%">
 	</colgroup>
 
 	<thead>
 		<tr>
-			<th>순서${search_text}</th>
+			<th>순서</th>
+			<th>이미지</th>
 			<th>제목</th>
 			<th scope="col">저자</th>
 		</tr>								
@@ -54,8 +56,9 @@
 	<c:forEach items="${items }" var="items" varStatus="status">
 		<tr>
 			<td>${status.count }</td>
-			<td class="txt_left"><a href="${items.url }">${items.title }</a>&nbsp; </td>
-	        <td><a href="${items.url }">${items.authors }</a></td>
+			<td><img alt="${items.title }" src="${items.thumbnail }"></td>
+			<td class="txt_left"><a href="${items.url }" target="_blanck">${items.title }</a>&nbsp; </td>
+	        <td><a href="${items.url }" target="_blanck">${items.authors }</a></td>
 		</tr> 
 	</c:forEach>	
 	</tbody>

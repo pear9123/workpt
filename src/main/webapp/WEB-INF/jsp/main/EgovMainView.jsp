@@ -81,6 +81,8 @@
           	</div>
 		<div class="col-md-10 col-lg-8 col-xl-7 mx-auto">
         	<form name="api" action="/kakao/api.do" method="post">
+        		<input type="radio" id="book" name="book_chk" value="book" checked="checked"><label for="book">제목</label>
+        		<input type="radio" id="isbn" name="book_chk" value="isbn"><label for="isbn">isbn</label>
             	<div class="form-row">
 	                <div class="col-12 col-md-9 mb-2 mb-md-0">
 	                  <input type="text" name="text" class="form-control form-control-lg" placeholder="찾으실 도서관 이름">

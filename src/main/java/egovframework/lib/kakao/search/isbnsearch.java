@@ -35,7 +35,11 @@ public class isbnsearch {
 	
 	@RequestMapping(value = "/kakao/api.do")
 	public String main(String[] args, HttpServletRequest request, ModelMap model ) throws ParseException {
+		String tmp_book_chk = "";
 		String text2  = request.getParameter("text");
+		tmp_book_chk = request.getParameter("book_chk");
+		System.out.println("tmp_book_chk:::"+tmp_book_chk);
+		String api_URL = "";
 		String pageIndex_string = request.getParameter("pageIndex");
 		int pageIndex = 0;
 		System.out.println("pageIndex_string="+pageIndex_string);
@@ -50,8 +54,14 @@ public class isbnsearch {
         String clientId = "8c4491d6abb54faa9a4448b3744a254c";//애플리케이션 클라이언트 아이디값";
         try {
             String text = URLEncoder.encode(text2, "UTF-8");
-            String apiURL = "https://dapi.kakao.com/v3/search/book?target=title&query="+text+"&page="+pageIndex; // json 결과
-            //String apiURL = "https://openapi.naver.com/v1/search/blog.xml?query="+ text; // xml 결과
+            if(tmp_book_chk.equals("book")){
+    			api_URL = "target=title&query="+text;
+    		} else if(tmp_book_chk.equals("isbn")) {
+    			api_URL = "target=isbn&query="+text;
+    		}
+//            String apiURL = "https://dapi.kakao.com/v3/search/book?target=title&query="+text+"&page="+pageIndex; // json 결과
+            String apiURL = "https://dapi.kakao.com/v3/search/book?"+api_URL+text+"&page="+pageIndex;
+            System.out.println("apiurl ::: "+apiURL);
             URL url = new URL(apiURL);
             HttpURLConnection con = (HttpURLConnection)url.openConnection();
             con.setRequestMethod("GET");

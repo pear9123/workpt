@@ -37,16 +37,25 @@ public class ImagePaginationRenderer extends AbstractPaginationRenderer implemen
 //        nextPageLabel     = "<li>&#160;<a href=\"?pageIndex={1}\" onclick=\"{0}({1});return false; \"><img src=\"" + servletContext.getContextPath() +  "/images/egovframework/com/cmm/mod/icon/icon_next.gif\"    alt=\"다음\"   border=\"0\"/></a></li>";
 //        lastPageLabel     = "<li><a href=\"?pageIndex={1}\" onclick=\"{0}({1});return false; \"><img src=\"" + servletContext.getContextPath() +  "/images/egovframework/com/cmm/mod/icon/icon_nextend.gif\" alt=\"마지막\" border=\"0\"/></a></li>";
 //	}
-	public void initVariables(){
-	firstPageLabel    = "<a href=\"?pageIndex={1}\" onclick=\"{0}({1});return false; \"><img src=\"" + servletContext.getContextPath() +  "/images/egovframework/com/cmm/mod/icon/icon_prevend.gif\" alt=\"처음\"   border=\"0\"/></a>";
-    previousPageLabel = "<a href=\"?pageIndex={1}\" onclick=\"{0}({1});return false; \"><img src=\"" + servletContext.getContextPath() +  "/images/egovframework/com/cmm/mod/icon/icon_prev.gif\"    alt=\"이전\"   border=\"0\"/></a>";
-    currentPageLabel  = "<span><a class=\"on\">{0}</a></span>";
-    otherPageLabel    = "<span><a href=\"?pageIndex={1}\" onclick=\"{0}({1});return false; \">{2}</a></span>";
-    nextPageLabel     = "<a href=\"?pageIndex={1}\" onclick=\"{0}({1});return false; \"><img src=\"" + servletContext.getContextPath() +  "/images/egovframework/com/cmm/mod/icon/icon_next.gif\"    alt=\"다음\"   border=\"0\"/></a>";
-    lastPageLabel     = "<a href=\"?pageIndex={1}\" onclick=\"{0}({1});return false; \"><img src=\"" + servletContext.getContextPath() +  "/images/egovframework/com/cmm/mod/icon/icon_nextend.gif\" alt=\"마지막\" border=\"0\"/></a>";
-}
-
 	
+//	public void initVariables(){
+//	firstPageLabel    = "<a href=\"?pageIndex={1}\" onclick=\"{0}({1});return false; \"><img src=\"" + servletContext.getContextPath() +  "/images/egovframework/com/cmm/mod/icon/icon_prevend.gif\" alt=\"처음\"   border=\"0\"/></a>";
+//    previousPageLabel = "<a href=\"?pageIndex={1}\" onclick=\"{0}({1});return false; \"><img src=\"" + servletContext.getContextPath() +  "/images/egovframework/com/cmm/mod/icon/icon_prev.gif\"    alt=\"이전\"   border=\"0\"/></a>";
+//    currentPageLabel  = "<span><a class=\"on\">{0}</a></span>";
+//    otherPageLabel    = "<span><a href=\"?pageIndex={1}\" onclick=\"{0}({1});return false; \">{2}</a></span>";
+//    nextPageLabel     = "<a href=\"?pageIndex={1}\" onclick=\"{0}({1});return false; \"><img src=\"" + servletContext.getContextPath() +  "/images/egovframework/com/cmm/mod/icon/icon_next.gif\"    alt=\"다음\"   border=\"0\"/></a>";
+//    lastPageLabel     = "<a href=\"?pageIndex={1}\" onclick=\"{0}({1});return false; \"><img src=\"" + servletContext.getContextPath() +  "/images/egovframework/com/cmm/mod/icon/icon_nextend.gif\" alt=\"마지막\" border=\"0\"/></a>";
+//	}
+	public void initVariables(){
+		firstPageLabel    = "";
+        previousPageLabel = "<a href=\"?pageIndex={1}\" onclick=\"{0}({1});return false; \">이전</a>";
+        currentPageLabel  = "<a class=\"on\">{0}</a>";
+        otherPageLabel    = "<a href=\"?pageIndex={1}\" onclick=\"{0}({1});return false; \">{2}</a>";
+        nextPageLabel     = "<a href=\"?pageIndex={1}\" onclick=\"{0}({1});return false; \">다음</a>";
+        lastPageLabel     = "";
+	}
+
+
 
 	public void setServletContext(ServletContext servletContext) {
 		this.servletContext = servletContext;
