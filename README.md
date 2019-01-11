@@ -18,5 +18,6 @@ Authorization : KakaoAK {app_key}
 | sort            | 결과 문서 정렬 방식           | X(accuracy)                    | accurary(정확도순)or latest(최신순) |
 | page            | 결과 페이지 번호              | X(기본 1)                      | 1-100 사이 Integer                 |
 | size            | 한 페이지에 보여질 문서의 개수 | X(기본 10)                     | 1-50 사이 Integer                  |
-| target          | 검색 필드 제한                | X                             | title(제목)<br/>isbn(isbn)          |
+| target          | 검색 필드 제한                | X                             | title(제목)<br/>isbn(isbn)<br/>publisher(출판사)<br/>
+                                                                                   person(인명)                        |
 
