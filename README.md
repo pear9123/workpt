@@ -20,3 +20,10 @@ Authorization : KakaoAK {app_key}
 | size            | 한 페이지에 보여질 문서의 개수 | X(기본 10)                     | 1-50 사이 Integer                  |
 | target          | 검색 필드 제한                | X                             | title(제목)<br/>isbn(isbn)<br/>publisher(출판사)<br/>person(인명)  |
 
+```
+예시)
+curl -v -X GET "https://dapi.kakao.com/v3/search/book?target=title" \
+--data-urlencode "query=미움받을 용기" \
+-H "Authorization: KakaoAK kkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk"
+```
+
